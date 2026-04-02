@@ -62,7 +62,7 @@ def _fetch_json(url: str) -> dict:
 
 def get_weather_summary(api_key: str, include_hourly: bool = False) -> str:
     """
-    Returns a plain English weather summary for Red Deer County.
+    Returns a plain English weather summary for the configured location.
     Current conditions + today's forecast + frost/precip alerts if present.
     Optional hourly breakdown for morning message use.
     """
@@ -87,7 +87,7 @@ def get_weather_summary(api_key: str, include_hourly: bool = False) -> str:
         condition = WEATHER_CODES.get(weather_code, "Unknown")
         wind_label = _wind_direction(wind_dir) if wind_dir else ""
 
-        parts = [f"Red Deer County: {temp}\u00b0C (feels like {feels}\u00b0C). {condition}."]
+        parts = [f"Local weather: {temp}\u00b0C (feels like {feels}\u00b0C). {condition}."]
 
         if wind_speed and wind_speed > 5:
             parts.append(f"Wind {wind_label} {wind_speed:.0f} km/h.")

@@ -8,7 +8,7 @@ Single-user Telegram bot on a cheap Linux VPS. No Docker, no CI/CD, no web serve
 - 1 vCPU, 512MB to 1GB RAM (all heavy compute is API calls)
 - Ubuntu 22.04 or 24.04
 - SSH access
-- Hetzner CX22 ($4.35/month) or DigitalOcean Basic ($6/month)
+- Any VPS with 2+ vCPU, 4GB RAM (e.g. Hetzner, DigitalOcean, ~$4-6/month)
 
 
 ## One-Time Setup
@@ -248,7 +248,7 @@ To test manually before waiting for cron:
 ssh dryft "cd /opt/dryft && python morning_message.py"
 ```
 
-Morning message preferences accumulate in the grass layer. Mike can reply to any morning message to adjust future messages.
+Morning message preferences accumulate in the grass layer. The user can reply to any morning message to adjust future messages.
 
 ## Security Notes
 

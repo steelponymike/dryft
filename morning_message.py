@@ -2,7 +2,7 @@
 Dryft — Morning Message
 
 Standalone script. Runs via cron at 8:15 AM MDT (14:15 UTC) on weekdays.
-Sends a proactive morning briefing to Mike via Telegram.
+Sends a proactive morning briefing to the user via Telegram.
 
 Synthesizes: weather, active projects, herd flags, user preferences.
 Preferences accumulate in the grass layer under subject "morning_message_preferences".
