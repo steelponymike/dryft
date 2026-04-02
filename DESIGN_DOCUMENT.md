@@ -1,7 +1,7 @@
 # Dryft: Ecological Memory Architecture for AI Systems
 ## Design Document — Prior Art Record
 
-**Author:** Mike Fettis
+**Author:** Mike Kozlowski
 **Date:** April 2, 2026
 **Version:** 1.0
 **Status:** Working implementation, open source release
@@ -153,5 +153,5 @@ Released under MIT License. This document establishes prior art and authorship f
 ---
 
 **Signed digitally by inclusion in git repository and email timestamp.**
-**Author: Mike Fettis**
+**Author: Mike Kozlowski**
 **Date: April 2, 2026**
