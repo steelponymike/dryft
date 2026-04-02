@@ -1,0 +1,21 @@
+# Dryft production dependencies
+# Minimal set for running the Telegram bot with voice + vision + file support.
+# Pin major.minor to avoid breaking changes.
+
+python-telegram-bot>=22.6,<23
+anthropic>=0.84,<1
+groq>=1.1,<2
+edge-tts>=7.2,<8
+sentence-transformers>=5.2,<6
+
+# File extraction (vision + document processing)
+PyPDF2>=3.0,<4
+python-docx>=1.1,<2
+openpyxl>=3.1,<4
+
+# Weather API (Tomorrow.io uses stdlib urllib, no extra dep needed)
+requests>=2.31,<3
+
+# Google Sheets reader
+google-auth>=2.20,<3
+google-api-python-client>=2.90,<3
