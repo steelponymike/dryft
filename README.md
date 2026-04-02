@@ -92,7 +92,6 @@ Sample data included:
 | `dormancy_staging.py` | Signal incubator — new signals mature before entering the herd |
 | `foundational.py` | Permanent core knowledge store |
 | `vector_scorer.py` | Cosine similarity scoring on dense embeddings |
-| `conversation_classifier.py` | Classifies conversation type for routing |
 
 ## What this is and isn't
 
