@@ -103,18 +103,9 @@ The architecture works. Turning it into something that plugs into agent framewor
 
 ## Design methodology
 
-Every major feature came from asking "how does nature handle this?"
+The ecological framing isn't decorative. It's where every feature came from. 15 years of working with living systems gave me a way of seeing these problems that keeps producing useful answers. The architecture didn't come from studying other memory systems. It came from watching how populations self-regulate.
 
-- Memory bloat? Nature has predators.
-- Stale memories? Nature has decay.
-- Related concepts? Nature has proximity bonding.
-- Wrong information? Humane dispatch — cull without decomposition, because wrong memories have zero substrate value.
-- Lost knowledge? Decomposition feeds the grass. Death creates substrate for future growth.
-
-This isn't a metaphor bolted on after the fact. It's the design process. 15 years of working with living systems, applied to AI memory.
-
-If you're interested in building on this approach, I'd love to stay involved as the systems designer. The biological intuition keeps generating useful ideas, and it's not something that transfers through code alone.
-
+If you're interested in building on this approach, I'd love to stay involved as the systems designer. The biological thinking keeps generating useful ideas, and it's not something that transfers through code alone.
 ## License
 
 MIT. Do what you want with it.
