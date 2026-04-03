@@ -1,5 +1,7 @@
 # Dryft
 
+![Dryft banner](dryft_banner.png)
+
 **AI memory that works like an ecosystem, not a filing cabinet.**
 
 Dryft is a living memory architecture for AI systems. Memories aren't static entries. They're a population — a herd — that self-regulates through fitness, bonding, decay, and predation.
