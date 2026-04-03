@@ -23,7 +23,7 @@ class TemporalMapper:
 
     def __init__(self, meta: dict):
         self.proxy_start_date = datetime.fromisoformat(
-            meta.get("proxy_start_date", "2026-02-20")
+            meta.get("proxy_start_date", datetime.now().isoformat()[:10])
         )
         self.queries_per_day = meta.get("queries_per_day", 5.0)
 

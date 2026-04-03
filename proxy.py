@@ -1120,7 +1120,8 @@ class DryftProxy:
             api_key = os.environ.get("TOMORROW_API_KEY")
             if not api_key:
                 return ""
-            from weather import get_weather_summary
+            # weather module not included in public release; set up your own weather provider
+                return ""
             summary = get_weather_summary(api_key)
             return f"[Current weather context]\n{summary}"
         except Exception as e:
@@ -1136,7 +1137,8 @@ class DryftProxy:
             creds_path = os.environ.get("GOOGLE_SHEETS_CREDENTIALS")
             if not creds_path:
                 return "[Google Sheets credentials not configured on this instance.]"
-            from sheets import read_sheet
+            # sheets module not included in public release
+                return "[Google Sheets integration not configured.]"
             sheet_url = match.group(0)
             # Extract tab name if mentioned in the message
             tab_name = None
@@ -1146,7 +1148,8 @@ class DryftProxy:
             result = read_sheet(creds_path, sheet_url, tab_name=tab_name)
             return f"[Google Sheet contents]\n{result}"
         except PermissionError:
-            from sheets import get_service_account_email
+            # sheets module not included in public release
+            return "[Google Sheets integration not configured.]"
             email = get_service_account_email(creds_path)
             return f"This sheet hasn't been shared with Dryft. Share it with {email} as a Viewer and try again."
         except FileNotFoundError:
