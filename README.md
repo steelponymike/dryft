@@ -106,6 +106,7 @@ for partner_id, bond_score in bonds.items():
 Sample data included:
 - `memories_sample.json` — 6 example memories demonstrating the data structure
 - `queries_sample.json` — 30 queries that exercise fitness, bonding, and predator dynamics
+- `demo_herd.json` — 24 pre-aged memories with established bonds, fading fitness, and memories on the edge of being culled. Use this to see the ecology in action immediately without building up a herd from scratch
 
 ## Core files
 
