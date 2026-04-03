@@ -77,6 +77,32 @@ python simulate.py --quiet
 python simulate.py --no-predator
 ```
 
+### Using the engine in your own code
+
+```python
+from herd_engine import HerdEngine
+
+# Load memories from JSON
+engine = HerdEngine("memories_sample.json")
+
+# Process a query — activates relevant memories, applies decay, updates bonds
+results = engine.process_query("How does our auth flow work?")
+
+# See what came back
+for memory_id, score in results["activated"]:
+    mem = engine.memories[memory_id]
+    print(f"{mem.content[:60]}... (fitness: {mem.fitness_score:.2f})")
+
+# Run the predator — culls weak memories
+culled = engine.run_predator()
+print(f"Culled {len(culled)} memories")
+
+# Check bond status between two memories
+bonds = engine.memories["sample-001-project-arch"].proximity_bonds
+for partner_id, bond_score in bonds.items():
+    print(f"Bond with {partner_id}: {bond_score:.2f}")
+```
+
 Sample data included:
 - `memories_sample.json` â€” 6 example memories demonstrating the data structure
 - `queries_sample.json` â€” 30 queries that exercise fitness, bonding, and predator dynamics
