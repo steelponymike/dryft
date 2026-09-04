@@ -4,3 +4,5 @@ memories.json
 memories_seed.json
 memories_state.json
 queries.json
+
+.claude/worktrees/
