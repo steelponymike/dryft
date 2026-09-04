@@ -1,0 +1,49 @@
+﻿{
+    "hooks":  {
+                  "SessionStart":  [
+                                       {
+                                           "hooks":  [
+                                                         {
+                                                             "type":  "command",
+                                                             "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/session-start.ps1"
+                                                         },
+                                                         {
+                                                             "type":  "command",
+                                                             "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/session-freshness.ps1"
+                                                         }
+                                                     ]
+                                       }
+                                   ],
+                  "Stop":  [
+                               {
+                                   "hooks":  [
+                                                 {
+                                                     "type":  "command",
+                                                     "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/checkpoint.ps1"
+                                                 }
+                                             ]
+                               }
+                           ],
+                  "SessionEnd":  [
+                                     {
+                                         "hooks":  [
+                                                       {
+                                                           "type":  "command",
+                                                           "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/checkpoint.ps1"
+                                                       }
+                                                   ]
+                                     }
+                                 ],
+                  "PreToolUse":  [
+                                     {
+                                         "matcher":  "Bash|PowerShell",
+                                         "hooks":  [
+                                                       {
+                                                           "type":  "command",
+                                                           "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/block-destructive.ps1"
+                                                       }
+                                                   ]
+                                     }
+                                 ]
+              }
+}
